@@ -7,7 +7,8 @@ export default class SearchContainer extends Component {
 
     state = {
         animals: [],
-        currentAnimal: []
+        currentAnimal: [],
+        isToggled: false
     }
 
     componentDidMount(){
@@ -31,13 +32,18 @@ export default class SearchContainer extends Component {
     handleChange = (event) => {
         event.preventDefault()
         let newAnimal = this.state.animals.find(animal => {
-            console.log(typeof animal.id)
             return animal.id === +event.target.value
         })
-        console.log(typeof event.target.value)
         this.setState({currentAnimal: newAnimal})
+        this.setState({isToggled: true})
     }
 
+    showCard = () => {
+        if (this.state.isToggled == true){
+            return <AnimalCard animal={this.state.currentAnimal}/>
+        } else {   
+        }
+    }
 
     render() {
         return (
@@ -49,6 +55,7 @@ export default class SearchContainer extends Component {
                         {this.listOptions()}
                     </select>
                 </form>
+                {this.showCard()}
             </div>
         )
     }
