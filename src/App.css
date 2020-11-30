@@ -1,0 +1,37 @@
+.App {
+    background-image: url("https://th.bing.com/th/id/OIP.x6gvpm_GG-7r8UxZhe2xHwHaC2?w=321&h=134&c=7&o=5&dpr=2&pid=1.7");
+    background-repeat: repeat-x;
+    margin-top: -25px;
+}
+
+h1 {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.animal-information {
+    padding: 30px;
+}
+
+.form {
+    padding-left: 30px;
+}
+
+/* .heart {
+    width:100px; 
+    height:90px;
+    margin-top:150px;
+	font-size: 150px;
+	color: #e00;
+	animation: beat 1.25s infinite alternate;
+	transform-origin: center;
+} */
+
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+section {
+    display:flex;
+    justify-content: space-evenly;
+}
